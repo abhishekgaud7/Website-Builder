@@ -15,6 +15,7 @@ const Home =() => {
      const onSubmitHandler = async (e:React.FormEvent) => {
     e.preventDefault();
 
+    console.log("Creating website with prompt:", input);
     setLoading(true)
     // Simulate an API call
     setTimeout(()=>{

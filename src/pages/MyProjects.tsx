@@ -1,6 +1,6 @@
-import React, {useEffect, useState } from 'react'
+import {useEffect, useState } from 'react'
 import type { Project } from '../types';
-import { Loader2, Loader2Icon, PlusIcon, TrashIcon } from 'lucide-react';
+import { Loader2Icon, PlusIcon, TrashIcon } from 'lucide-react';
 import { useNavigate } from 'react-router-dom';
 import { dummyProjects } from '../assets/assets';
 import Footer from '../components/Footer';
