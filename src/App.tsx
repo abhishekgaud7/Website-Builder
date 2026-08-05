@@ -10,7 +10,7 @@ import View from './pages/View'
 import SignIn from './pages/SignIn'
 import Navbar from './components/Navbar.tsx'
 import { supabase } from './utils/supabaseClient'
-import { Session } from '@supabase/supabase-js'
+import type { Session } from '@supabase/supabase-js'
 
 // Create Auth Context
 interface AuthContextProps {
