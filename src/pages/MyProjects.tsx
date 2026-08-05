@@ -20,7 +20,7 @@ const MyProjects = () => {
   }
 
   const deleteProject = async (projectId: string) => {
-
+    setProjects(prev => prev.filter(p => p.id !== projectId));
   }
 
   useEffect(()=>{

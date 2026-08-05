@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react'
+import { useEffect, useState } from 'react'
 import type { Project } from '../types'
 import { useNavigate, useParams } from 'react-router-dom'
 import { Loader2Icon, MessageSquare, XIcon } from 'lucide-react'
@@ -12,22 +12,17 @@ const Projects = () => {
   const [project, setProject] = useState<Project | null>(null)
   const [loading, setLoading] = useState(true)
 
-  const [isGenerating, setIsGenerating] = useState(true)
-  const [device, setDevice] = useState<'phone' | 'tablet' | 'desktop'>('desktop')
-
   const [isMenuOpen, setMenuOpen] = useState(false)
-  const [isSaving, setIsSaving] = useState(false)
 
   const fetchProject = async () => {
-  const project = dummyProjects.find(project => project.id === projectId)
+    const project = dummyProjects.find(project => project.id === projectId)
     setTimeout(() => {
-    if (project) {
-      setProject({ ...project, conversation: dummyConversations })
-      setIsGenerating(project.current_code ? false : true)
-    }
-    setLoading(false)
-  }, 2000)
-}
+      if (project) {
+        setProject({ ...project, conversation: dummyConversations })
+      }
+      setLoading(false)
+    }, 2000)
+  }
 
 
 

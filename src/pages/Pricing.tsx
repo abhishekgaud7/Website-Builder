@@ -5,7 +5,7 @@ interface Plan {
   id: string;
   name: string;
   price: string;
-  credites: number;
+  credits: number;
   description: string;
   features: string[];
 }
@@ -13,8 +13,8 @@ interface Plan {
 const Pricing = () => {
   const [plans] = React.useState<Plan[]>(appPlans)
 
-    const handlePurchase = async (planId) => {
-        
+    const handlePurchase = async (planId: string) => {
+        console.log("Purchase plan:", planId);
     }
   return (
     <>
